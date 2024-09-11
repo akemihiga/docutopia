@@ -1,0 +1,45 @@
+:root {
+  --primary-color-100: #675dff;
+  --primary-color-200: #4e11e2;
+
+  --secondary-color-100: #d8dee4;
+  --secondary-color-200: #f5f6f8;
+  --secondary-color-300: #ebeef1;
+  --secondary-color-400: #636c7b;
+  --secondary-color-500: #596171;
+  --secondary-color-600: #505865;
+  --secondary-color-700: #3e444f;
+  --secondary-color-800: #353a44;
+  --secondary-color-900: #2b3039;
+
+  --tertiary-color-50: #474e5a;
+  --tertiary-color-100: #fff;
+  --tertiary-color-200: rgba(1, 150, 237, 0.36);
+
+  --primary-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --code-font: "Source Code Pro", Menlo, Monaco, monospace;
+
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+
+  --heading-size-1: 1.5rem;
+  --heading-size-2: 1.5em;
+
+  --font-size-xs: 0.75rem;
+  --font-size-s: 0.875rem;
+  --font-size-m: 0.85em;
+  --font-size-l: 1rem;
+
+  --arrow-icon: url('data:image/svg+xml,<svg data-testid="chevron-expanded" aria-hidden="true" width="12" height="12" viewBox="0 0 16 16" fill="%236c7688" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.381.381a.875.875 0 0 0 0 1.238L10.763 8 4.38 14.381a.875.875 0 1 0 1.24 1.239l7-7a.875.875 0 0 0 0-1.238l-7-7a.875.875 0 0 0-1.238 0Z"></path></svg>');
+  --show-icon: url('data:image/svg+xml,<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="%236c7688" xmlns="http://www.w3.org/2000/svg" class="⚙ as11k as11l as11m as11n as11g as11p as11q as160 as12u ⚙xrjaft"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 .25c.483 0 .875.392.875.875v6h6a.875.875 0 0 1 0 1.75h-6v6a.875.875 0 0 1-1.75 0v-6h-6a.875.875 0 1 1 0-1.75h6v-6c0-.483.392-.875.875-.875Z"></path></svg>');
+
+  --select-box-shadow: 0 0.0625rem 0.0625rem 0 rgba(16, 17, 26, 0.16),
+    var(--secondary-color-400) 0 0 0 0.0625rem, 0 0 0 0 transparent,
+    0 0 0 0 transparent;
+  --focus-select-box-shadow: 0 0.0625rem 0.0625rem 0 rgba(16, 17, 26, 0.16),
+    var(--secondary-color-400) 0 0 0 0.0625rem,
+    0 0 0 0.25rem var(--tertiary-color-200), 0 0 0 0 transparent;
+}
