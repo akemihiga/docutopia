@@ -13,14 +13,24 @@
   --secondary-color-900: #2b3039;
 
   --tertiary-color-50: #474e5a;
-  --tertiary-color-100: #fff;
+  --tertiary-color-100: #ffffff;
   --tertiary-color-200: rgba(1, 150, 237, 0.36);
+
+  --required-attribute-color: #cc4b00;
+
+  --method-get-color: #045ad0;
+  --method-post-color: #217005;
+  --method-delete-color: #b13600;
+
+  --transparent-secondary-color-100: rgba(48, 49, 61, 0.08);
+  --transparent-secondary-color-200: rgba(0, 0, 0, 0.12);
 
   --primary-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
   --code-font: "Source Code Pro", Menlo, Monaco, monospace;
 
+  --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semi-bold: 600;
   --font-weight-bold: 700;
@@ -28,6 +38,7 @@
   --heading-size-1: 1.5rem;
   --heading-size-2: 1.5em;
 
+  --font-size-xxs: 0.7rem;
   --font-size-xs: 0.75rem;
   --font-size-s: 0.875rem;
   --font-size-m: 0.85em;
