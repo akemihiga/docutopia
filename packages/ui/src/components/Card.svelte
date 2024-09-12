@@ -36,7 +36,6 @@
   .card {
     border-radius: 0.5rem;
     border: 0.0625rem solid var(--secondary-color-100);
-    overflow: hidden;
   }
 
   .card-header {

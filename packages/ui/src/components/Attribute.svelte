@@ -6,6 +6,8 @@
   export let type: string = "";
   export let expandable: boolean = false;
   export let button: { name: string } | undefined = undefined;
+  export let isRequired: boolean = false;
+  export let isChildren: boolean = false;
 
   let isOpen: boolean;
 </script>
@@ -14,6 +16,7 @@
   bind:open={isOpen}
   {expandable}
   variant={button ? "button" : undefined}
+  {isChildren}
 >
   <summary>
     {#if button}
@@ -23,8 +26,11 @@
         <Link />
       </a>
       <div class="header-attribute" class:expandable-header={expandable}>
-        <span>{name}</span>
+        <span><slot name="name">{name}</slot></span>
         <span>{type}</span>
+        {#if isRequired}
+          <span class="required-attribute">required</span>
+        {/if}
       </div>
     {/if}
   </summary>
@@ -48,14 +54,24 @@
   .header-attribute > span:first-child {
     font-weight: var(--font-weight-bold);
     color: var(--secondary-color-800);
-    font-family: var(--code-font);
     font-size: var(--font-size-s);
     line-height: 1.25rem;
   }
+  .header-attribute > span:first-child,
+  :global(.header-attribute > span:first-child span) {
+    font-family: var(--code-font);
+  }
   .header-attribute > span:not(:first-child) {
-    color: var(--secondary-color-500);
     font-size: var(--font-size-xs);
     line-height: 1rem;
+  }
+  .header-attribute > span:not(:first-child, .required-attribute) {
+    color: var(--secondary-color-500);
+  }
+  .required-attribute {
+    color: var(--required-attribute-color);
+    font-weight: var(--font-weight-semi-bold);
+    text-transform: capitalize;
   }
 
   .expandable-header > span:first-child {
@@ -69,7 +85,6 @@
     background-image: var(--arrow-icon);
     background-size: contain;
     background-repeat: no-repeat;
-    /* padding-right: 0.15rem; */
     width: 0.75rem;
     height: 0.75rem;
     display: inline-block;
@@ -129,10 +144,22 @@
   :global(.attribute-button[open] > summary > span) {
     border-radius: 0.5rem 0.5rem 0 0;
   }
-  :global(.attribute-button[open] .content-attribute) {
+
+  :global(.attribute:not(.attribute-button) > .content-attribute) {
+    display: grid;
+    gap: 1rem;
+  }
+  :global(.attribute-button > .content-attribute) {
     border: 0.0625rem solid var(--secondary-color-100);
     border-top-color: transparent;
     border-radius: 0 0 0.5rem 0.5rem;
+  }
+  :global(
+      .attribute-button:not(:has(.attribute-children)) > .content-attribute
+    ) {
     padding: 1rem;
+  }
+  :global(.header-attribute span.bold) {
+    color: var(--secondary-color-500);
   }
 </style>

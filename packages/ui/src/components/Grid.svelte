@@ -23,5 +23,7 @@
   }
   :global(.container-grid > div) {
     height: fit-content;
+    display: grid;
+    gap: 1rem;
   }
 </style>
